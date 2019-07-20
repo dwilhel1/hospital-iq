@@ -1,3 +1,7 @@
 @import '../../../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+@import 'variables.scss';
+@import 'spacing.scss';
 @import 'base.scss';
+@import 'tables.scss';
+@import 'material-overrides.scss';

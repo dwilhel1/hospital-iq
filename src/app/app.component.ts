@@ -32,6 +32,7 @@ export class AppComponent implements OnInit, OnDestroy {
       takeUntil(this.unsubscribe),
     ).subscribe((response: UnitsResponse) => {
       this.unitsResponse = response;
+      console.log(this.unitsResponse);
       this._snackBar.open('Successfully requested units', 'Close');
     }, () => {
       this._snackBar.open('Error requesting units', 'Retry').onAction().pipe(

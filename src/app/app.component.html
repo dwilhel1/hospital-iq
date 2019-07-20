@@ -3,3 +3,5 @@
     <span>Hospital IQ Assessment</span>
   </mat-toolbar-row>
 </mat-toolbar>
+
+<app-units-table *ngIf="unitsResponse" [units]="unitsResponse?.units"></app-units-table>
