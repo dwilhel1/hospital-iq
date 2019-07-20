@@ -1,5 +1,5 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
+import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { MatSort, MatTableDataSource } from '@angular/material';
 import { Subject } from 'rxjs';
 
 import { Unit } from '../../models/response/units.model';
@@ -10,6 +10,9 @@ import { Unit } from '../../models/response/units.model';
   styleUrls: ['./units-table.component.scss']
 })
 export class UnitsTableComponent implements OnInit, OnDestroy {
+  @ViewChild(MatSort)
+  private sort: MatSort;
+
   @Input()
   private units: Unit[];
 
@@ -19,6 +22,7 @@ export class UnitsTableComponent implements OnInit, OnDestroy {
 
   public ngOnInit(): void {
     this.tableData = new MatTableDataSource(this.units);
+    this.tableData.sort = this.sort;
   }
 
   public ngOnDestroy(): void {

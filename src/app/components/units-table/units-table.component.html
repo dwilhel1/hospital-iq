@@ -1,42 +1,42 @@
 <mat-card>
-  <table mat-table [dataSource]='tableData'>
+  <table mat-table matSort [dataSource]='tableData'>
     <ng-container matColumnDef="name">
-        <th mat-header-cell *matHeaderCellDef class="color-ink">Name</th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="color-ink">Name</th>
         <td mat-cell *matCellDef="let unit">
             <p>{{ unit.name || '—' }}</p>
         </td>
     </ng-container>
 
     <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef class="color-ink">ID</th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="color-ink">ID</th>
         <td mat-cell *matCellDef="let unit">
             <p>{{ unit.id || '—' }}</p>
         </td>
     </ng-container>
 
     <ng-container matColumnDef="capacity">
-        <th mat-header-cell *matHeaderCellDef class="color-ink">Capacity</th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="color-ink">Capacity</th>
         <td mat-cell *matCellDef="let unit">
             <p>{{ unit.capacity || '—' }}</p>
         </td>
     </ng-container>
 
     <ng-container matColumnDef="census">
-        <th mat-header-cell *matHeaderCellDef class="color-ink">Census</th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="color-ink">Census</th>
         <td mat-cell *matCellDef="let unit">
             <p>{{ unit.census || '—' }}</p>
         </td>
     </ng-container>
 
     <ng-container matColumnDef="highAlarm">
-        <th mat-header-cell *matHeaderCellDef class="color-ink">High alarm</th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="color-ink">High alarm</th>
         <td mat-cell *matCellDef="let unit">
             <p>{{ unit.highAlarm || '—' }}</p>
         </td>
     </ng-container>
 
     <ng-container matColumnDef="lowAlarm">
-        <th mat-header-cell *matHeaderCellDef class="color-ink">Low alarm</th>
+        <th mat-header-cell mat-sort-header *matHeaderCellDef class="color-ink">Low alarm</th>
         <td mat-cell *matCellDef="let unit">
             <p>{{ unit.lowAlarm || '—' }}</p>
         </td>
@@ -46,5 +46,5 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <p *ngIf='!tableData || tableData.data?.length === 0'>No units available to display.</p>
+  <p *ngIf='!tableData || tableData.data?.length === 0' class="color-gray-100">No units available to display.</p>
 </mat-card>

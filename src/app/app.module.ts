@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { MatSnackBarModule, MatToolbarModule, MatTableModule, MatCardModule, MatSidenavModule } from '@angular/material';
+import { MatSnackBarModule, MatToolbarModule, MatTableModule, MatCardModule, MatSidenavModule, MatSortModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { UnitsTableComponent } from './components/units-table/units-table.component';
@@ -23,6 +23,7 @@ import { HeaderComponent } from './components/header/header.component';
     MatTableModule,
     MatCardModule,
     MatSidenavModule,
+    MatSortModule,
   ],
   exports: [
     MatSnackBarModule,
@@ -31,6 +32,7 @@ import { HeaderComponent } from './components/header/header.component';
     MatTableModule,
     MatCardModule,
     MatSidenavModule,
+    MatSortModule,
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
