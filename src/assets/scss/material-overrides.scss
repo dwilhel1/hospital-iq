@@ -4,3 +4,9 @@ mat-card.mat-card {
   margin: $spacing-24;
   border-radius: $mat-card-border-radius;
 }
+
+mat-toolbar.mat-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
