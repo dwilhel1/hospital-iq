@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 import { takeUntil } from 'rxjs/operators'
 import { Subject } from 'rxjs';
 
@@ -15,7 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
   public unitsResponse: UnitsResponse;
   private unsubscribe: Subject<void> = new Subject();
 
-  constructor(private unitService: UnitService) {}
+  constructor(private unitService: UnitService, private _snackBar: MatSnackBar) {}
 
   public ngOnInit(): void {
     this.getAllUnits();
@@ -31,9 +32,13 @@ export class AppComponent implements OnInit, OnDestroy {
       takeUntil(this.unsubscribe),
     ).subscribe((response: UnitsResponse) => {
       this.unitsResponse = response;
-      console.log(this.unitsResponse);
+      this._snackBar.open('Successfully requested units', 'Close');
     }, () => {
-      console.log('There was an error');
+      this._snackBar.open('Error requesting units', 'Retry').onAction().pipe(
+        takeUntil(this.unsubscribe),
+      ).subscribe(() => {
+        this.getAllUnits();
+      });
     });
   }
 }
