@@ -4,16 +4,21 @@
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 ## Visual Examples
+
 **Application Example**
+
 ![](https://i.imgur.com/NPQsEuK.png "hospital-iq application example")
 
 **Empty table**
+
 ![](https://i.imgur.com/3hovqe5.png "hospital-iq application empty table")
 
 **Error state**
+
 ![](https://i.imgur.com/V7GyV65.png "hospital-iq application error state")
 
 **Sorting Example**
+
 ![](https://i.imgur.com/9Wam0zL.gif "hospital-iq sorting example")
 
 ## Development server
