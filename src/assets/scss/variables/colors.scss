@@ -1,0 +1,15 @@
+$color-map: () !default;
+
+@function colorify($id, $color) {
+    $color-map: map-merge($color-map, ($id: $color)) !global;
+
+    @return $color;
+}
+
+$color-ink: colorify('ink', #212b36);
+$color-gray-100: colorify('gray-100', #637381);
+$color-gray-200: colorify('gray-200', #919eab);
+$color-gray-300: colorify('gray-300', #c4cdd5);
+$color-gray-400: colorify('gray-400', #dfe3e8);
+$color-gray-500: colorify('gray-500', #f4f6f8);
+$color-gray-600: colorify('gray-600', #f9fafd);
