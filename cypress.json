@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost:4200",
+    "env": {
+        "endpointServer": "https://private-anon-0a3707b0d4-hospiqtest.apiary-mock.com"
+    }
+}
