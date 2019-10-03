@@ -1,6 +1,6 @@
 # `hospital-iq` take-home assessment
 
-* An implementation of the take-home assessment for Hospital IQ's frontend engineering position
+* An implementation of the take-home assessment for a frontend engineering position
 * This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 ## Visual Examples
